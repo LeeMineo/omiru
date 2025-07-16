@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMIRU - 전체 제품</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.6/dist/web/static/pretendard.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- 상단 광고 배너 -->
+  <div class="top-banner">
+    <span>다섯 가지 맛의 오미자, 한 잔의 감성을 담다</span>
+    <button class="close-banner">&times;</button>
+  </div>
+
+  <!-- 헤더 -->
+  <header class="main-header">
+    <div class="inner header-flex">
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="../assets/images/red_logo.svg" alt="OMIRU 로고" />
+        </a>
+      </div>
+
+      <div class="header-center">
+        <nav class="nav">
+          <ul>
+            <li><a href="product-list.html">ALL</a></li>
+            <li><a href="product-list.html">BEST</a></li>
+            <li><a href="product-list.html">오미자 스틱</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <a href="cart.html">
+          <img src="../assets/images/cart.png" alt="장바구니" class="cart-icon" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 제품 리스트 페이지 -->
+  <section class="product-list-page">
+    <div class="inner">
+      <div class="list-controls">
+        <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+        <select class="filter-select">
+          <option value="all">전체</option>
+          <option value="popular">인기순</option>
+          <option value="low">낮은 가격순</option>
+          <option value="high">높은 가격순</option>
+        </select>
+      </div>
+
+      <div class="product-list">
+        <!-- 반복 상품 카드 -->
+        <div class="product-card">
+          <img src="../assets/images/product-1.png" alt="제품">
+          <p class="title">애사비소다 500ml 2종</p>
+          <p class="price"><del>30,000원</del> <strong>19,900원</strong> <span class="discount">34%</span></p>
+        </div>
+        <div class="product-card">
+          <img src="../assets/images/product-2.png" alt="제품">
+          <p class="title">화이트발사믹 제로 500ml</p>
+          <p class="price"><del>30,000원</del> <strong>20,900원</strong> <span class="discount">30%</span></p>
+        </div>
+        <!-- 더 많은 제품 카드들... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="main-footer">
+    <div class="inner">
+      <div class="footer-left">
+        <div class="logo">OMIRU</div>
+        <p>대표 이민서 | 경상북도 포항시 | 통신판매업신고번호 제XXX-XXXX-XXX호</p>
+        <p>고객센터: lms4882@gmail.com</p>
+        <p>&copy; OMIRU All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <p>평일 10:00 ~ 17:00<br>점심 12:30 ~ 13:30<br>주말/공휴일 휴무</p>
+        <button class="feedback">의견 제안</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OMIRU - 메인</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.6/dist/web/static/pretendard.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- 상단 광고 배너 -->
+  <div class="top-banner">
+    <span>다섯 가지 맛의 오미자, 한 잔의 감성을 담다</span>
+    <button class="close-banner">&times;</button>
+  </div>
+
+  <!-- 헤더 -->
+  <header class="main-header">
+    <div class="inner header-flex">
+      <div class="header-left">
+        <a href="index.html" class="logo">
+          <img src="../assets/images/red_logo.svg" alt="OMIRU 로고" />
+        </a>
+      </div>
+
+      <div class="header-center">
+        <nav class="nav">
+          <ul>
+            <li><a href="product-list.html">ALL</a></li>
+            <li><a href="product-list.html">BEST</a></li>
+            <li><a href="product-list.html">오미자 스틱</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-right">
+        <a href="cart.html">
+          <img src="../assets/images/cart.png" alt="장바구니" class="cart-icon" />
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 메인 배너 -->
+<!-- 메인 배너 -->
+<section class="main-banner">
+    <div class="banner-slider">
+      <img src="../assets/images/banner-1.svg" class="slide active" alt="배너1" />
+      <img src="../assets/images/banner-2.svg" class="slide" alt="배너2" />
+      <img src="../assets/images/banner-3.svg" class="slide" alt="배너3" />
+    </div>
+  </section>
+  
+  
+
+  <!-- BEST 상품 섹션 -->
+  <section class="best-products">
+    <div class="inner">
+      <h2>BEST</h2>
+      <div class="category-buttons">
+        <button class="active" onclick="location.href='product-list.html'">전체</button>
+        <button onclick="location.href='product-list.html'">오미자스틱</button>
+      </div>
+      <div class="product-list">
+        <a href="product.html" class="product-card">
+          <img src="../assets/images/ex.svg" alt="애사비소다 2종">
+          <p class="title">애사비소다 500ml 2종</p>
+          <p class="price"><del>30,000원</del> <strong>19,900원</strong> <span class="discount">34%</span></p>
+        </a>
+        <a href="product.html" class="product-card">
+          <img src="../assets/images/ex.svg" alt="화이트발사믹">
+          <p class="title">쿨룩 애사비소다 화이트발사믹 제로 500ml</p>
+          <p class="price"><del>30,000원</del> <strong>20,900원</strong> <span class="discount">30%</span></p>
+        </a>
+        <a href="product.html" class="product-card">
+          <img src="../assets/images/ex.svg" alt="레몬비니거">
+          <p class="title">쿨룩 애사비소다 레몬비니거 제로 500ml</p>
+          <p class="price"><del>30,000원</del> <strong>20,900원</strong> <span class="discount">30%</span></p>
+        </a>
+        <a href="product.html" class="product-card">
+          <img src="../assets/images/ex.svg" alt="스프린트 에너지">
+          <p class="title">쿨룩 스프린트 에너지 2종 250/500ml</p>
+          <p class="price"><del>36,000원</del> <strong>19,900원</strong> <span class="discount">45%</span></p>
+        </a>
+      </div>
+      <button class="load-more" onclick="location.href='product-list.html'">더보기</button>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="main-footer">
+    <div class="inner">
+      <div class="footer-left">
+        <div class="logo">OMIRU</div>
+        <p>대표 이민서 | 경상북도 포항시 | 통신판매업신고번호 제XXX-XXXX-XXX호</p>
+        <p>고객센터: lms4882@gmail.com</p>
+        <p>&copy; OMIRU All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <p>평일 10:00 ~ 17:00<br>점심 12:30 ~ 13:30<br>주말/공휴일 휴무</p>
+        <button class="feedback">의견 제안</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

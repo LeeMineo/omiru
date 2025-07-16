@@ -1,0 +1,23 @@
+// main.scss
+
+// Pretendard 웹폰트 사용 (CDN 링크는 HTML에서 불러오는 중이므로 생략 가능)
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+// SCSS partial 파일 import
+@import 'variables';
+@import 'header';
+@import 'footer';
+@import 'index';
+@import 'product';
+@import 'product-list';
+@import 'cart';
+@import 'comingsoon';
+
+// 글로벌 리셋
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

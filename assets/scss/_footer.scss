@@ -1,0 +1,52 @@
+
+  // 푸터
+  .main-footer {
+    background: #fafafa;
+    padding: 40px 0;
+    font-size: 14px;
+    color: #444;
+  
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  
+    .footer-left {
+      flex: 1 1 50%;
+  
+      .logo {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        margin: 4px 0;
+      }
+    }
+  
+    .footer-right {
+      flex: 1 1 30%;
+      text-align: right;
+  
+      .call-number {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+  
+      .feedback {
+        margin-top: 10px;
+        padding: 6px 14px;
+        font-size: 13px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+  
