@@ -1,10 +1,10 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     { "source": "/", "destination": "/pages/index.html" },
-    { "source": "/index", "destination": "/pages/index.html" },
-    { "source": "/main", "destination": "/pages/index.html" },
-    { "source": "/product-list", "destination": "/pages/product-list.html" },
-    { "source": "/product", "destination": "/pages/product.html" },
-    { "source": "/cart", "destination": "/pages/cart.html" }
+    { "source": "/index.html", "destination": "/pages/index.html" },
+    { "source": "/product-list.html", "destination": "/pages/product-list.html" },
+    { "source": "/product.html", "destination": "/pages/product.html" },
+    { "source": "/cart.html", "destination": "/pages/cart.html" }
   ]
 }
