@@ -326,6 +326,161 @@ body {
   border-bottom: 2px solid #CE3A39;
 }
 
+/* === 공통 === */
+.menu-toggle {
+  display: none; /* 기본은 숨김(데스크톱) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #000;
+}
+
+/* 모바일 전용 사이드 메뉴 */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%; /* 화면 밖에 숨겨둠 */
+  width: 70%;
+  height: 100vh;
+  background: #fff;
+  padding: 100px 24px 40px; /* 헤더 높이만큼 여백 */
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.08);
+  transition: right 0.3s ease;
+  z-index: 999; /* 헤더보다 위 */
+}
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-size: 18px;
+}
+.mobile-nav ul li {
+  width: max-content;
+}
+
+/* === 반응형 === */
+@media (max-width: 768px) {
+  /* ① 햄버거 버튼 표시 */
+  .menu-toggle {
+    display: flex;
+  }
+  /* ② 데스크톱 네비게이션 숨김 */
+  .header-center .desktop-nav {
+    display: none;
+  }
+  /* ③ mobile-nav 오픈 상태 */
+  .mobile-nav.open {
+    right: 0;
+  }
+}
+/* ③ 모바일(≤768px)에서 헤더의 장바구니 숨김 */
+@media (max-width: 768px) {
+  .header-right .cart-icon {
+    display: none;
+  }
+}
+/* ④ 모바일 메뉴 닫기(X) 버튼 */
+.menu-close {
+  position: absolute; /* 모바일 메뉴 오른쪽 위 */
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: 0;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  padding-right: 206px;
+}
+
+/* (a)  로고와 왼쪽 가장자리 사이 여백 */
+.header-left {
+  padding-left: 16px; /* 원하는 값(예: 16~24px)으로 조정 */
+}
+
+/* (b)  header-right 안의 요소들을 오른쪽 끝으로 몰기 */
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* 👈 핵심 */
+}
+
+/* 이미 있던 반응형 규칙 유지 + 보강 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  } /* 햄버거 보이기 */
+  .header-right .cart-icon {
+    display: none;
+  } /* 장바구니 숨김 */
+}
+/* 모바일에서 햄버거 오른쪽에 20px 여백 */
+@media (max-width: 768px) {
+  .menu-toggle {
+    margin-right: 20px;
+  }
+}
+/* ────────────────────────────────
+   모바일 사이드 메뉴 스타일 업그레이드
+───────────────────────────────── */
+.mobile-nav {
+  /* 기존 속성은 그대로 두고… */
+}
+
+/* 1)  리스트 기본값 리셋 */
+.mobile-nav ul {
+  list-style: none; /* • 제거 */
+  margin: 0;
+  padding: 0;
+}
+
+/* 2)  항목 공통 스타일 */
+.mobile-nav li {
+  /* 항목 간격은 gap 대신 margin 으로 주면 폰트 크기만 바꿀 때도 깔끔 */
+  margin-bottom: 24px; /* 원하는 간격 */
+}
+
+/* 3)  링크 스타일 */
+.mobile-nav li a {
+  display: block; /* 전체 터치 영역 확보 */
+  font-size: 20px; /* 좀 더 크게 */
+  font-weight: 600;
+  line-height: 1.2;
+  color: #111; /* 기본 텍스트 컬러 */
+  text-decoration: none; /* 밑줄 제거 */
+  transition: color 0.2s;
+}
+
+/* 4)  hover·focus·active 상태 */
+.mobile-nav li a:hover,
+.mobile-nav li a:focus {
+  color: #CE3A39; /* 브랜드 레드 */
+}
+
+.mobile-nav li a:active {
+  opacity: 0.7;
+}
+
+/* 5)  마지막 항목(장바구니)에 강조 주고 싶다면 */
+.mobile-nav li:last-child a {
+  font-weight: 700;
+}
+
+/* 필요하면 작은 기기에서 더 크게 */
+@media (max-width: 480px) {
+  .mobile-nav li a {
+    font-size: 22px;
+  }
+}
 .product-detail {
   padding: 60px 0;
   background: #fff;
