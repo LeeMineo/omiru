@@ -42,16 +42,13 @@
   </header>
 
   <!-- 메인 배너 -->
-<!-- 메인 배너 -->
-<section class="main-banner">
+  <section class="main-banner">
     <div class="banner-slider">
       <img src="../assets/images/banner-1.svg" class="slide active" alt="배너1" />
       <img src="../assets/images/banner-2.svg" class="slide" alt="배너2" />
       <img src="../assets/images/banner-3.svg" class="slide" alt="배너3" />
     </div>
   </section>
-  
-  
 
   <!-- BEST 상품 섹션 -->
   <section class="best-products">
@@ -62,27 +59,53 @@
         <button onclick="location.href='product-list.html'">오미자스틱</button>
       </div>
       <div class="product-list">
+        <!-- 판매 중인 상품 -->
         <a href="product.html" class="product-card">
-          <img src="../assets/images/ex.svg" alt="애사비소다 2종">
-          <p class="title">애사비소다 500ml 2종</p>
-          <p class="price"><del>30,000원</del> <strong>19,900원</strong> <span class="discount">34%</span></p>
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="레몬 허브 하이볼">
+          </div>
+          <p class="title">레몬 허브 하이볼 (단맛)</p>
+          <p class="price"><del>25,000원</del> <strong>17,500원</strong> <span class="discount">30%</span></p>
         </a>
-        <a href="product.html" class="product-card">
-          <img src="../assets/images/ex.svg" alt="화이트발사믹">
-          <p class="title">쿨룩 애사비소다 화이트발사믹 제로 500ml</p>
-          <p class="price"><del>30,000원</del> <strong>20,900원</strong> <span class="discount">30%</span></p>
-        </a>
-        <a href="product.html" class="product-card">
-          <img src="../assets/images/ex.svg" alt="레몬비니거">
-          <p class="title">쿨룩 애사비소다 레몬비니거 제로 500ml</p>
-          <p class="price"><del>30,000원</del> <strong>20,900원</strong> <span class="discount">30%</span></p>
-        </a>
-        <a href="product.html" class="product-card">
-          <img src="../assets/images/ex.svg" alt="스프린트 에너지">
-          <p class="title">쿨룩 스프린트 에너지 2종 250/500ml</p>
-          <p class="price"><del>36,000원</del> <strong>19,900원</strong> <span class="discount">45%</span></p>
-        </a>
+      
+        <!-- 출시 준비 중 상품 -->
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="산미 블라스트 하이볼">
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">산미 블라스트 하이볼 (신맛)</p>
+          <p class="price"><del>26,000원</del> <strong>18,200원</strong> <span class="discount">30%</span></p>
+        </div>
+      
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="허브 쉐이드 하이볼">
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">허브 쉐이드 하이볼 (쓴맛)</p>
+          <p class="price"><del>28,000원</del> <strong>19,600원</strong> <span class="discount">30%</span></p>
+        </div>
+      
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="시트러스 진저 하이볼">
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">시트러스 진저 하이볼 (매운맛)</p>
+          <p class="price"><del>27,000원</del> <strong>18,900원</strong> <span class="discount">30%</span></p>
+        </div>
+
+        <div class="product-card unavailable">
+            <div class="image-wrapper">
+              <img src="../assets/images/ex.svg" alt="디프 오션 하이볼">
+              <div class="overlay">상품 준비중</div>
+            </div>
+            <p class="title">디프 오션 하이볼 (짠맛)</p>
+            <p class="price"><del>30,000원</del> <strong>21,000원</strong> <span class="discount">30%</span></p>
+          </div>
       </div>
+      
       <button class="load-more" onclick="location.href='product-list.html'">더보기</button>
     </div>
   </section>

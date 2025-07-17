@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Pretendard", sans-serif;
 }
@@ -108,6 +109,7 @@ body {
   padding: 0 20px;
 }
 
+/* 상단 광고 배너 */
 .top-banner {
   background: #CE3A39;
   color: #fff;
@@ -116,6 +118,7 @@ body {
   padding: 10px;
   position: relative;
 }
+
 .top-banner .close-banner {
   position: absolute;
   right: 15px;
@@ -127,22 +130,23 @@ body {
   cursor: pointer;
 }
 
+/* 메인 배너 (자동 슬라이드 캐러셀용 기본 스타일) */
 .main-banner {
   position: relative;
   width: 100%;
   overflow: hidden;
   background-color: #f9f9f9;
 }
-.main-banner .banner-slider {
+
+.banner-slider {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.main-banner .banner-slider img.slide {
+
+.banner-slider img.slide {
   width: 100%;
   height: auto;
   max-width: 100%;
@@ -151,70 +155,123 @@ body {
   transition: opacity 0.8s ease-in-out;
   opacity: 0;
 }
-.main-banner .banner-slider img.slide.active {
+
+.banner-slider img.slide.active {
   display: block;
   opacity: 1;
   position: relative;
 }
 
+/* BEST 섹션 */
 .best-products {
   padding: 60px 0;
 }
+
 .best-products h2 {
   font-size: 24px;
   text-align: center;
   margin-bottom: 30px;
 }
-.best-products .category-buttons {
+
+.category-buttons {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 40px;
 }
-.best-products .category-buttons button {
+
+.category-buttons button {
   padding: 8px 20px;
   background: #eee;
   border: none;
   border-radius: 20px;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.2s;
 }
-.best-products .category-buttons button.active {
+
+.category-buttons button.active {
   background: #CE3A39;
   color: #fff;
 }
+
+.category-buttons button:hover {
+  background: #ccc;
+}
+
 .best-products .product-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
+  justify-content: center;
   margin-bottom: 30px;
 }
-.best-products .product-list .product-card {
+
+.product-card {
+  position: relative;
   width: 220px;
   text-align: left;
+  text-decoration: none;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.best-products .product-list .product-card img {
+
+.product-card .image-wrapper {
+  position: relative;
+}
+
+.product-card .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.product-card.unavailable {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.product-card img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 10px;
 }
-.best-products .product-list .product-card .title {
+
+.product-card .title {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: 15px;
+  color: #111;
+  text-decoration: none !important;
 }
-.best-products .product-list .product-card .price {
+
+.product-card .price {
   font-size: 14px;
+  text-decoration: none !important;
 }
-.best-products .product-list .product-card .price del {
+
+.product-card del {
   color: #999;
   margin-right: 6px;
+  text-decoration: none !important;
 }
-.best-products .product-list .product-card .price strong {
+
+.product-card strong {
   color: #d70000;
+  text-decoration: none !important;
 }
-.best-products .product-list .product-card .price .discount {
+
+.product-card .discount {
   background: #ffe8e8;
   color: #d70000;
   font-size: 12px;
@@ -222,7 +279,8 @@ body {
   border-radius: 4px;
   margin-left: 5px;
 }
-.best-products .load-more {
+
+.load-more {
   display: block;
   margin: 0 auto;
   padding: 10px 24px;
@@ -232,8 +290,14 @@ body {
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
+.load-more:hover {
+  background: #555;
+}
+
+/* 네비게이션 */
 .nav ul {
   list-style: none;
   display: flex;
@@ -241,46 +305,25 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .nav ul li a {
   text-decoration: none;
   font-weight: 500;
   color: #111;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
+  transition: all 0.2s;
 }
+
 .nav ul li a:hover {
   color: #CE3A39;
   border-color: #CE3A39;
 }
+
 .nav ul .active a {
   font-weight: bold;
   color: #CE3A39;
   border-bottom: 2px solid #CE3A39;
-}
-
-.category-buttons button {
-  transition: all 0.2s;
-}
-.category-buttons button:hover {
-  background: #ccc;
-}
-
-.load-more {
-  transition: all 0.2s;
-}
-.load-more:hover {
-  background: #555;
-}
-
-.product-card {
-  color: #111;
-  text-decoration: none !important;
-}
-.product-card .title,
-.product-card .price,
-.product-card del,
-.product-card strong {
-  text-decoration: none !important;
 }
 
 .product-detail {
@@ -417,64 +460,120 @@ body {
   margin-top: 10px;
 }
 
+/* product-list 전용 스타일 */
+.product-list-page .inner {
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .product-list-page {
   padding: 60px 0;
 }
+
 .product-list-page .list-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
-.product-list-page .list-controls .search-input {
-  width: 60%;
-  padding: 10px;
+
+.product-list-page .search-wrapper {
+  position: relative;
+  flex: 1 1 400px;
+  max-width: 300px;
+}
+
+.product-list-page .search-input {
+  width: 100%;
+  padding: 14px 40px 14px 14px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  background: transparent;
+  color: #111;
+}
+
+.product-list-page .search-input::placeholder {
+  color: #888;
+  font-size: 16px;
+}
+
+.product-list-page .search-icon {
+  position: absolute;
+  left: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.product-list-page .filter-select {
+  padding: 10px 36px 10px 14px;
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: none;
+  background: #000;
+  color: #fff;
   border-radius: 6px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20,50 70,100 120,50' stroke='%23fff' stroke-width='15' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
 }
-.product-list-page .list-controls .filter-select {
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
+
 .product-list-page .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-content: center;
 }
-.product-list-page .product-list .product-card {
-  border: 1px solid #eee;
+
+.product-list-page .product-card {
   border-radius: 8px;
   padding: 12px;
   text-align: left;
   transition: box-shadow 0.2s;
+  background-color: #fff;
 }
-.product-list-page .product-list .product-card:hover {
+
+.product-list-page .product-card:hover {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
-.product-list-page .product-list .product-card img {
+
+.product-list-page .product-card img {
   width: 100%;
   border-radius: 6px;
   margin-bottom: 10px;
 }
-.product-list-page .product-list .product-card .title {
+
+.product-list-page .product-card .title {
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 5px;
 }
-.product-list-page .product-list .product-card .price {
+
+.product-list-page .product-card .price {
   font-size: 14px;
 }
-.product-list-page .product-list .product-card .price del {
+
+.product-list-page .product-card del {
   color: #888;
   margin-right: 6px;
 }
-.product-list-page .product-list .product-card .price strong {
+
+.product-list-page .product-card strong {
   color: #d70000;
 }
-.product-list-page .product-list .product-card .price .discount {
+
+.product-list-page .product-card .discount {
   background: #ffecec;
   color: #d70000;
   font-size: 12px;

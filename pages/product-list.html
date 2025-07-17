@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OMIRU - 전체 제품</title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/pretendard@1.3.6/dist/web/static/pretendard.css" rel="stylesheet" />
 </head>
 <body>
@@ -19,10 +19,9 @@
     <div class="inner header-flex">
       <div class="header-left">
         <a href="index.html" class="logo">
-            <img src="../assets/images/omiru_logo.svg" alt="OMIRU 로고" />
+          <img src="../assets/images/omiru_logo.svg" alt="OMIRU 로고" />
         </a>
       </div>
-
       <div class="header-center">
         <nav class="nav">
           <ul>
@@ -32,7 +31,6 @@
           </ul>
         </nav>
       </div>
-
       <div class="header-right">
         <a href="cart.html">
           <img src="../assets/images/cart.png" alt="장바구니" class="cart-icon" />
@@ -44,8 +42,11 @@
   <!-- 제품 리스트 페이지 -->
   <section class="product-list-page">
     <div class="inner">
-      <div class="list-controls">
-        <input type="text" placeholder="검색어를 입력하세요" class="search-input">
+    <div class="list-controls">
+        <div class="search-wrapper">
+          <input type="text" class="search-input" placeholder="검색어를 입력해주세요" />
+          <img src="../assets/images/search.svg" alt="검색" class="search-icon" />
+        </div>
         <select class="filter-select">
           <option value="all">전체</option>
           <option value="popular">인기순</option>
@@ -55,20 +56,56 @@
       </div>
 
       <div class="product-list">
-        <!-- 반복 상품 카드 -->
-        <div class="product-card">
-          <img src="../assets/images/ex.svg" alt="제품">
-          <p class="title">애사비소다 500ml 2종</p>
-          <p class="price"><del>30,000원</del> <strong>19,900원</strong> <span class="discount">34%</span></p>
+        <!-- 레몬 허브: 판매 중 -->
+        <a href="product.html" class="product-card">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="레몬 허브 하이볼" />
+          </div>
+          <p class="title">레몬 허브 하이볼 (단맛)</p>
+          <p class="price"><del>25,000원</del> <strong>17,500원</strong> <span class="discount">30%</span></p>
+        </a>
+      
+        <!-- 상품 준비중: 오버레이 처리 -->
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="산미 블라스트 하이볼" />
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">산미 블라스트 하이볼 (신맛)</p>
+          <p class="price"><del>26,000원</del> <strong>18,200원</strong> <span class="discount">30%</span></p>
         </div>
-        <div class="product-card">
-          <img src="../assets/images/ex.svg" alt="제품">
-          <p class="title">화이트발사믹 제로 500ml</p>
-          <p class="price"><del>30,000원</del> <strong>20,900원</strong> <span class="discount">30%</span></p>
+      
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="허브 쉐이드" />
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">허브 쉐이드 하이볼 (쓴맛)</p>
+          <p class="price"><del>28,000원</del> <strong>19,600원</strong> <span class="discount">30%</span></p>
         </div>
-        <!-- 더 많은 제품 카드들... -->
+      
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="시트러스 진저" />
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">시트러스 진저 하이볼 (매운맛)</p>
+          <p class="price"><del>27,000원</del> <strong>18,900원</strong> <span class="discount">30%</span></p>
+        </div>
+      
+        <div class="product-card unavailable">
+          <div class="image-wrapper">
+            <img src="../assets/images/ex.svg" alt="디프 오션" />
+            <div class="overlay">상품 준비중</div>
+          </div>
+          <p class="title">디프 오션 하이볼 (짠맛)</p>
+          <p class="price"><del>30,000원</del> <strong>21,000원</strong> <span class="discount">30%</span></p>
+        </div>
       </div>
+      
+      
     </div>
+</div>
   </section>
 
   <!-- 푸터 -->
@@ -81,7 +118,7 @@
         <p>&copy; OMIRU All rights reserved.</p>
       </div>
       <div class="footer-right">
-        <p>평일 10:00 ~ 17:00<br>점심 12:30 ~ 13:30<br>주말/공휴일 휴무</p>
+        <p>평일 10:00 ~ 17:00<br />점심 12:30 ~ 13:30<br />주말/공휴일 휴무</p>
         <button class="feedback">의견 제안</button>
       </div>
     </div>
