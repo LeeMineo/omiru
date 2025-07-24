@@ -594,6 +594,14 @@ body {
   color: #888;
 }
 
+.floating-alert-btn {
+  /* 기존 스타일 유지하면서 밑줄 제거 추가 */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .product-detail {
   padding: 60px 0;
   background: #fff;
