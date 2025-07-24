@@ -149,12 +149,28 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
 </body>
 <!-- 출시 알람 플로팅 버튼 -->
-<button class="floating-alert-btn">
+<button class="floating-alert-btn" id="open-alert-form">
   <img src="../assets/images/bell.png" alt="알림 아이콘" class="bell-icon" />
   출시 알람 받기
 </button>
+<!-- 알림 신청 폼 -->
+<div class="alert-form-overlay" id="alert-form">
+  <div class="alert-form-container">
+    <button class="close-alert-form" id="close-alert-form">&times;</button>
+    <h3>출시 알람 신청</h3>
+    <form id="notify-form">
+      <label for="name">이름 또는 별명</label>
+      <input type="text" id="name" name="name" required placeholder="이름 또는 별명을 입력하세요" />
+
+      <label for="email">이메일</label>
+      <input type="email" id="email" name="email" required placeholder="이메일 주소를 입력하세요" />
+
+      <button type="submit" class="submit-btn">알림 신청하기</button>
+    </form>
+  </div>
+</div>
+<script src="../assets/js/main.js"></script>
 
 </html>

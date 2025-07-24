@@ -40,3 +40,37 @@ function closeNav(){                 // 이미 있는 로직 재활용
 }
 
 menuClose.addEventListener('click', closeNav);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const openBtn = document.getElementById('open-alert-form');
+  const closeBtn = document.getElementById('close-alert-form');
+  const alertForm = document.getElementById('alert-form');
+  const notifyForm = document.getElementById('notify-form');
+
+  // 열기
+  openBtn.addEventListener('click', () => {
+    alertForm.style.display = 'flex';
+  });
+
+  // 닫기
+  closeBtn.addEventListener('click', () => {
+    alertForm.style.display = 'none';
+  });
+
+  // 제출 시 (나중에 fetch로 백엔드 연결)
+  notifyForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = notifyForm.name.value;
+    const email = notifyForm.email.value;
+
+    console.log('알림 신청됨:', { name, email });
+
+    // TODO: Spring Boot 백엔드에 POST 요청 연결 예정
+    // fetch('/api/notify', { method: 'POST', body: JSON.stringify({ name, email }) })
+
+    alertForm.style.display = 'none';
+    notifyForm.reset();
+    alert('출시 알림 신청이 완료되었습니다!');
+  });
+});
